@@ -1,0 +1,146 @@
+.page-wrapper{
+    width:100%;
+    height:100%;
+}
+
+.left-side-nav{
+    width:500px;
+border:2px solid #e8e8e8;
+    position:fixed;
+    z-index:999;
+    height:100%;
+}
+
+.main-section-wrapper{
+    width:100%;
+    height:100%;
+    padding-left:500px;
+}
+.main-section{
+    position:fixed;
+    background:#e8e8e8;
+    width:100%;
+    height:100%;
+        padding: 20px 0 0 30px;
+        max-height:700px;
+        overflow-y:scroll;
+}
+
+
+
+  .bot-bubble {
+     position: relative;
+    width: 250px;
+    margin-left: 5%;
+    /* height: 100px; */
+    padding: 12px;
+    line-height: 20px;
+    background: #f7f7f2;
+      margin-bottom: 21px;
+}
+/*
+  .bot-bubble:after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: -15px;
+    border-style: solid;
+    border-width: 15px 15px 15px 0;
+    border-color: transparent #f7f7f2;
+    display: block;
+    width: 0;
+    z-index: 1;
+}*/
+
+
+  .user-bubble {
+       position: relative;
+    width: 250px;
+    padding: 12px;
+    background: #bfd1db;
+    line-height: 20px;
+    margin-left: 36%;
+    margin-bottom: 21px;
+}
+/*
+  .user-bubble:after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: -15;
+    border-style: solid;
+    border-width: 15px 0 15px 15px;
+    border-color: transparent #a4c5d6;
+    display: block;
+    width: 0;
+    z-index: 1;
+}*/
+
+
+.chat-message{
+    position:absolute;
+    bottom:100;
+    width:100%;
+}
+
+.chat-message form .chat-message-input{
+    width:98%;
+}
+
+.chat-conversation-container{
+     position: top;
+    width: 100%;
+    height: 650px;
+
+     overflow-y: auto;
+    overflow-x: hidden;
+    margin: 13px 0 0 0;
+}
+
+
+
+.aside-header{
+        background: #D32F2F;
+    padding: 18px;
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    
+}
+
+thead {
+    display: none;
+}
+tr {
+    display: block;
+    margin-bottom:10px;
+   
+    background-color: transparentize( white, 0.15 );
+    box-shadow: 0 0 1rem transparentize( black, 0.9 );
+}
+td {
+    display: inline-block;
+    margin: 0 5px  10px 0;
+    padding: 0.5rem;
+    text-align: left;
+        width: 175px;
+    background-color: white;
+    border: 1px solid transparentize( #58C25F, 0.5 );
+    
+}
+td:before {
+    float: left;
+    margin: -0.5rem 0.5rem -0.5rem -0.5rem;
+    padding: 0.625rem 0.5rem 0.625rem;
+    font-size: 0.75em;
+    font-weight: bold;
+    background: transparentize( #58C25F, 0.9 );
+    color: #58C25F;
+}
+td:nth-child(2):before {
+    content: "to: ";
+}
+
+.capitalize {
+   text-transform: capitalize;
+}

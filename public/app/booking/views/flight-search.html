@@ -1,0 +1,53 @@
+
+<div class="page-wrapper">
+        <aside class="left-side-nav">
+                   <header class="aside-header">
+                            <h2>Booking Bot</h2>
+                   </header>
+                <section class="chat-conversation-container">
+                    <div class="chat-conversation">
+                        <div ng-repeat="msg in $ctrl.conversation"
+                         ng-class="{'bot-bubble':msg.isBot===true,'user-bubble':msg.isBot===false}">
+                            {{msg.text}}
+                        </div>
+                    </div>
+                </section>
+                <section class="chat-message">
+                    <form ng-keypress="$ctrl.sendMessage($event)">
+                        <textarea class="chat-message-input" ng-model="$ctrl.formData.text"></textarea>
+                    </form>
+                </section>
+        </aside>
+        <section class="main-section-wrapper">
+                   <header class="aside-header" style="color:#D32F2F">NLS</header>
+              <div class="main-section">
+           
+    
+                <section class="search-result">
+            
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th><th></th><th></th><th></th><th></th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="data in $ctrl.flights">
+                                <td class="capitalize">{{data.from}} </td> <td class="capitalize">{{data.to}}</td><td>{{data.classOfTravel}}</td><td>{{data.departureDate | date:'medium'}}</td><td>{{data.returnDate|date:'medium'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            
+                </section>
+              </div>
+        </section>
+</div>
+
+<!--<div>
+    <aside class="bot">
+        <div ui-view="bot"></div>
+    </aside>
+    <section class="view-data-area">
+        <div ui-view="info"></div>
+    </section>
+</div>-->

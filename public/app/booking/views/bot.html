@@ -1,0 +1,16 @@
+<div>
+    <h2>Booking Bot</h2>
+    <section>
+        <ul class="chat-conversation">
+            <li ng-repeat="msg in $ctrl.conversation">
+                {{msg.text}}
+            </li>
+        </ul>
+    </section>
+    <section class="chat-message">
+        <form ng-submit="$ctrl.sendMessage()">
+            <textarea class="chat-message-input" ng-model="$ctrl.formData.text"></textarea>
+            <button type="submit">send</button>
+        </form>
+    </section>
+</div>
